@@ -1,0 +1,125 @@
+/* ===== Base / page-wide ===== */
+:root{
+  --bg: #f4f4f4;            /* light gray background */
+  --ink: #222222;             /* dark gray text */
+  --accent: #1E90FF;          /* bright blue accent */
+  --bar-bg: #003366;          /* deep blue for header/footer */
+  --sidebar: #FFD580;         /* light orange sidebar */
+  --sidebar-hover: #FFA500;   /* darker orange on hover */
+  --button: #28a745;          /* green button */
+  --button-hover: #218838;    /* darker green on hover */
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+/* ===== Header & Footer (same class) ===== */
+.bar {
+  background: var(--bar-bg);
+  color: #ffffff;           /* make text pop on deep blue */
+  padding: 16px 20px;       /* padding required */
+  margin: 16px 0;           /* margin required */
+  text-align: center;       /* center the H1 text */
+}
+
+.bar h1 { margin: 0; }
+
+/* ===== Navigation: 3 items horizontally, no bullets, hover state ===== */
+.nav {
+  list-style: none;         /* no bullets */
+  display: flex;            /* horizontal layout */
+  gap: 16px;
+  justify-content: center;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--ink);
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.nav a:hover {
+  background: var(--accent);
+  color: #ffffff;           /* bright blue + white text */
+}
+
+/* ===== Two-column layout ===== */
+.content {
+  display: flex;            /* keep main + sidebar on one line */
+  gap: 2%;
+  max-width: 1100px;
+  margin: 0 auto 24px auto;
+  padding: 0 16px;
+}
+
+/* Percent widths per rubric */
+main {
+  width: 68%;               /* in % */
+  background: #ffffff;      /* white main card on gray body */
+  padding: 16px;            /* padding required */
+  margin: 8px 0;            /* margin required */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+}
+
+.rules {                    /* sidebar */
+  width: 30%;               /* in % */
+  background: var(--sidebar);      /* distinct orange */
+  padding: 16px;                    /* padding required */
+  margin: 8px 0;                    /* margin required */
+  border-radius: 8px;
+  transition: background-color .2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+}
+.rules:hover {
+  background: var(--sidebar-hover); /* darker orange on hover */
+}
+
+/* ===== Form styles (in MAIN) ===== */
+.form-group { margin: 12px 0; }    /* use a div to modify text boxes */
+label { font-size: 1.1rem; display:block; margin-bottom: 6px; } /* larger labels */
+
+input[type="text"],
+select {
+  width: 60%;
+  max-width: 420px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+/* Interaction: text box grows on focus, returns on blur */
+input[type="text"] { transition: width .2s ease; }
+input[type="text"]:focus {
+  width: 80%;
+  outline: 3px solid #c7e1ff;
+  border-color: #60a5fa;
+}
+
+/* Style ONLY the submit button */
+button[type="submit"]{
+  background: var(--button);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  margin-top: 10px;         /* some margin */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color .15s ease;
+}
+button[type="submit"]:hover{
+  background: var(--button-hover);  /* hover state */
+}

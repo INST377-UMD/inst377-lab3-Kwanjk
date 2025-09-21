@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Lab 3 — Rock • Paper • Scissors</title>
+
+  <!-- External CSS (required) -->
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+  <!-- Header (uses the same class as footer) -->
+  <header class="bar">
+    <h1>Rock • Paper • Scissors</h1>
+  </header>
+
+    <!-- Navigation (3 items, horizontal, no bullets, hover state) -->
+  <nav aria-label="Primary">
+    <ul class="nav">
+      <li><a href="https://www.wikihow.com/Play-Rock,-Paper,-Scissors" target="_blank" rel="noopener">How to Play</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Rock_paper_scissors" target="_blank" rel="noopener">History</a></li>
+      <li><a href="https://thereader.mitpress.mit.edu/the-psychological-depths-of-rock-paper-scissors/" target="_blank" rel="noopener">Psychology</a></li>
+    </ul>
+  </nav>
+
+  <!-- Two-column content area -->
+  <div class="content">
+    <!-- Main (in %) -->
+    <main>
+      <h2>Enter the Arena</h2>
+
+      <!-- Form in MAIN: name (required) + select -->
+      <form>
+        <div class="form-group">
+          <label for="playerName">Name (required):</label>
+          <input id="playerName" name="playerName" type="text" required placeholder="e.g., Josh" />
+        </div>
+
+        <div class="form-group">
+          <label for="move">Choose your move:</label>
+          <select id="move" name="move">
+            <option>Rock</option>
+            <option>Paper</option>
+            <option>Scissors</option>
+          </select>
+        </div>
+
+        <button type="submit">Play</button>
+      </form>
+    </main>
+
+    <!-- Sidebar (in %, different BG; hover changes BG) -->
+    <aside class="rules" aria-label="Rules">
+      <h3>Rules</h3>
+      <ul>
+        <li>Rock crushes Scissors</li>
+        <li>Scissors cut Paper</li>
+        <li>Paper covers Rock</li>
+        <li>Same move = tie</li>
+      </ul>
+    </aside>
+  </div>
+
+  <!-- Footer (same class as header) -->
+  <footer class="bar">
+    <p>INST377 — Lab 3</p>
+  </footer>
+
+</body>
+</html>
