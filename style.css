@@ -1,13 +1,13 @@
 /* ===== Base / page-wide ===== */
 :root{
-  --bg: #f4f4f4;            /* page background (light gray) */
-  --ink: #222222;           /* main text color */
-  --accent: #1E90FF;        /* nav hover blue */
-  --bar-bg: #003366;        /* header/footer deep blue */
-  --sidebar: #FFD580;       /* sidebar orange */
-  --sidebar-hover: #FFA500; /* sidebar darker orange on hover */
-  --button: #28a745;        /* green submit */
-  --button-hover: #218838;  /* darker green on hover */
+  --bg: #f4f4f4;            /* light gray background */
+  --ink: #222222;             /* dark gray text */
+  --accent: #1E90FF;          /* bright blue accent */
+  --bar-bg: #003366;          /* deep blue for header/footer */
+  --sidebar: #FFD580;         /* light orange sidebar */
+  --sidebar-hover: #FFA500;   /* darker orange on hover */
+  --button: #28a745;          /* green button */
+  --button-hover: #218838;    /* darker green on hover */
 }
 
 * { box-sizing: border-box; }
